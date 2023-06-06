@@ -1,0 +1,81 @@
+<!--<!DOCTYPE HTML>-->
+
+<!--<html>-->
+<!--	<head>-->
+<!--		<title>Login</title>-->
+<!--	</head>-->
+<!--	<body>-->
+<!--        <div class="container">-->
+<!--		<h1>Login</h1>-->
+<!--			<form method="POST" action="{{ url_for('login') }}" novalidate>-->
+<!--    		{{ form.csrf_token }}-->
+<!--    		{{ form.name.label }} {{ form.name(size=30) }}-->
+<!--				{% for error in form.name.errors %}-->
+<!--				<span style="color:red;"> {{ error }}</span>-->
+<!--				{% endfor %}-->
+
+
+<!--				<br> <br>-->
+<!--				{{ form.password.label }} {{ form.password(size=30) }}-->
+<!--				{% for error in form.password.errors %}-->
+<!--				<span style="color:red;"> {{ error }}</span>-->
+<!--				{% endfor %}-->
+
+
+
+<!--				<br><br>-->
+<!--				{{ form.submit }}-->
+
+<!--</form>-->
+<!--        &lt;!&ndash; This is where our form will go. &ndash;&gt;-->
+<!--        </div>-->
+<!--	</body>-->
+<!--</html>-->
+
+
+
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Login{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="container">
+		<h1>Login</h1>
+<!--	 {{  wtf.quick_form(form, novalidate=True, method="POST" , action="{{ url_for('login') }}" ) }}-->
+<!--	 -->
+	  {{ wtf.quick_form(form) }}
+
+
+<!--			<form method="POST" action="{{ url_for('login') }}" novalidate>-->
+<!--    		{{ form.csrf_token }}-->
+<!--    		{{ form.name.label }} {{ form.name(size=30) }}-->
+<!--				{% for error in form.name.errors %}-->
+<!--				<span style="color:red;"> {{ error }}</span>-->
+<!--				{% endfor %}-->
+
+
+<!--				<br> <br>-->
+<!--				{{ form.password.label }} {{ form.password(size=30) }}-->
+<!--				{% for error in form.password.errors %}-->
+<!--				<span style="color:red;"> {{ error }}</span>-->
+<!--				{% endfor %}-->
+
+
+
+<!--				<br><br>-->
+<!--				{{ form.submit }}-->
+
+<!--				</form>-->
+        <!-- This is where our form will go. -->
+ </div>
+
+{% endblock %}
